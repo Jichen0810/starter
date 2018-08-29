@@ -1,0 +1,29 @@
+{
+  "properties": [
+    {
+      "name": "config.code",
+      "type": "java.lang.String",
+      "description": "Code"
+    },
+    {
+      "name": "config.name",
+      "type": "java.lang.String",
+      "description": "Name"
+    },
+    {
+      "name": "config.hobby",
+      "type": "java.lang.String",
+      "description": "Hobby"
+    },
+    {
+      "name": "blog.id",
+      "type": "java.lang.Integer",
+      "description": "Blog`s ID"
+    },
+    {
+      "name": "blog.name",
+      "type": "java.lang.String",
+      "description": "Blog`s Name"
+    }
+  ]
+}
