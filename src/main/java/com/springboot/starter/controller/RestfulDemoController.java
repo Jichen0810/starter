@@ -1,15 +1,16 @@
 package com.springboot.starter.controller;
 
-import com.springboot.starter.dto.DemoDto;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/restful-demo")
+@Slf4j
 public class RestfulDemoController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String getAll() {
-        return DemoDto.builder().build().toString();
+        return "Get all";
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
