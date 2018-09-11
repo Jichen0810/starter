@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.annotation.Order;
 
 import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 //@WebFilter(filterName = "demoSecondFilter", urlPatterns = UrlPatternConst.ALL_URL)
@@ -24,6 +25,7 @@ public class DemoSecondFilter implements Filter {
         //example设置编码格式
         servletRequest.setCharacterEncoding(GlobalConst.CHARSET_UTF8);
         servletResponse.setCharacterEncoding(GlobalConst.CHARSET_UTF8);
+        log.info(((HttpServletRequest)servletRequest).getRequestURI());
         //逻辑
         //传递到下一个Filter
         filterChain.doFilter(servletRequest, servletResponse);
